@@ -5,4 +5,6 @@ sudo rm /usr/local/mysql \
 && rm -rf ~/Library/PreferencePanes/My* \
 && sudo rm -rf /Library/Receipts/mysql* \
 && sudo rm -rf /Library/Receipts/MySQL* \
-&& sudo rm -rf /private/var/db/receipts/*mysql* 
+&& sudo rm -rf /private/var/db/receipts/*mysql*
+
+echo "edit /etc/hostconfig and remove the line MYSQLCOM=-YES-" 
