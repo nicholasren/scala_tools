@@ -1,4 +1,4 @@
-cp -R ~/.vim/ftdetect .
-cp -R ~/.vim/indent .
-cp -R ~/.vim/syntax .
+rm  ~/.vim/ftdetect/scala.vim 
+rm  ~/.vim/indent/scala.vim
+rm  ~/.vim/syntax/scala.vim
 
