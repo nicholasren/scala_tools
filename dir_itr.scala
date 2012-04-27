@@ -1,11 +1,22 @@
 /**
- * iterate a directory and print all file names
+ * iterate a directory and apply a function to its all files under it
  */
 
 import java.io.File
 
-val dir  = new File(".")
-val files_name = dir.listFiles().map{f => f.getName}
+def forall( root : File, func : File => Unit):Unit = {
+  val children = root.listFiles
+  children.filter{ f => f.isFile }.foreach {
+     f => func(f) 
+  }
 
-files_name foreach println 
+  children.filter{ f => f.isDirectory}.foreach{
+    f=> forall(f, func)
+  }
+}
+
+
+val root = new File(".")
+
+forall(root, (f:File) => println(f))
 	
