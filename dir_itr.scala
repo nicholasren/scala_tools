@@ -1,3 +1,6 @@
+#!/usr/bin/env scala
+!#
+
 /**
  * iterate a directory and apply a function to its all files under it
  */
